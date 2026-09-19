@@ -1189,7 +1189,7 @@ class BolMapViewer(QtOpenGLWidgets.QOpenGLWidget):
                     else:
                         objlist = list(self.level_file.objects_with_positions.values())
                         self.graphics.render_select(objlist)
-                        pixels = glReadPixels(click_x, click_y, clickwidth, clickheight, GL_RGB, GL_UNSIGNED_BYTE)
+                        pixels = glReadPixels(read_x, read_y, clickwidth, clickheight, GL_RGB, GL_UNSIGNED_BYTE)
                         self.selectdebug.record_view("3DSelect", click_x, click_y)
                         #print(pixels, click_x, click_y, clickwidth, clickheight)
 
